@@ -4,9 +4,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>reader</title>
+	<title>One Line News</title>
 
-	<link rel='stylesheet' href='https://classless.de/classless.css'>
+
+	<meta name="description" content="Get one line news from sources you love, all at one place using one line news.">
+
+	<!-- <link rel='stylesheet' href='https://classless.de/classless.css'> -->
+	<!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.5.min.css"/>
+
+
+
 	<style>
 		a:link {
 			color: #FF0000;
@@ -28,25 +36,41 @@
 </head>
 <body>
 
-<h1>News</h1>
-<p></p>
+
+    <header>
+    	<nav>
+    		<ul>
+    			<li><h1>One Line News</h1><p>...from sources you love, at one place!!!</p></li>
+    		</ul>
+       	</nav>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#coming-soon">Coming Soon...</a></li>
+            </ul>
+        </nav>
+        <br>
+<!--         <p><a href="#"><i>Italic Link Button</i></a><a href="#"><b>Bold Link Button &rarr;</b></a></p>
+ -->    </header>
+
+<article>
 
 <?php
 
 $sites = array( "https://the-ken.com/feed/",
 				"https://finshots.in/rss/",
 				"https://cms.qz.com/feed/",
-				"https://entrackr.com/feed/",
-				"https://www.kuwi.news/feed/",
-				"https://www.wired.com/feed/",
-				"https://ajuniorvc.com/feed/",
-				"https://factordaily.com/feed/",
 				"https://us7.campaign-archive.com/feed?u=17538c76a9a05dfd6438f64c7&id=bbaa8cffe0",
-				"https://inc42.com/feed/",
+				"https://ajuniorvc.com/feed/",	
+				"https://www.kuwi.news/feed/",	
 				"https://oldrope.substack.com/feed/",
-				"https://www.techinasia.com/feed/",
 				"https://1947tech.substack.com/feed/",
-				"https://turnaround.substack.com/feed/"
+				"https://turnaround.substack.com/feed/",				
+				"https://entrackr.com/feed/",
+				"https://www.wired.com/feed/",
+				"https://factordaily.com/feed/",
+				"https://inc42.com/feed/",
+				"https://www.techinasia.com/feed/"
 				);
 
 
@@ -92,7 +116,7 @@ foreach ($matches as $index => $val) {
 	$name = str_replace("</title>","",$name);	
 
 	if ($index==0) {
-	 	$text = "<h3><a href=\"".$val."\">".$name."</a></h3><br>";
+	 	$text = "<h2><a href=\"".$val."\">".$name."</a></h2><br>";
 	 }
 	 else {
 		$text .= "<a href=\"".$val."\">".$name."</a><br>";
@@ -117,6 +141,46 @@ print($html);
 
 ?>
 
+</article>
+
+<hr>
+
+<article id="about">
+<h2 >About OneLineNews</h2>
+<p>
+	One line news is an attempt to simplify the way we consume news.<br>
+	We believe human knows what they want or at least with right tool/platform they can decide what they want.
+	<br>
+	So, instead of algorithms deciding "news for you",<br>
+	read news from sources/people you know/love.<br>
+	A weekend project by <a href="https://twitter.com/5HU3HENDU">Shubhendu Singh</a>.
+
+</p>	
+</article>
+
+<article>
+<h2>Updates Coming Soon</h2>
+<p>
+	<ul>
+		<li>customize sources (add/remove/sort)</li>
+		<li>An app for iOS & Android (before ClubHouse's)</li>
+		<li>Byju's acquisition offer or billion dollar IPO XD</li>
+	</ul>	
+</p>
+
+</article>
+
+<script type="text/javascript">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JY0Y8HJ43T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JY0Y8HJ43T');
+</script>	
+</script>
 
 </body>
 </html>
