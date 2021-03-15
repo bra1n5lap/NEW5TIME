@@ -65,7 +65,8 @@ $sites = array( "https://the-ken.com/feed/",
 				"https://www.kuwi.news/feed/",	
 				"https://oldrope.substack.com/feed/",
 				"https://1947tech.substack.com/feed/",
-				"https://turnaround.substack.com/feed/",				
+				"https://turnaround.substack.com/feed/",
+				"https://filtercoffee.substack.com/feed/",			
 				"https://entrackr.com/feed/",
 				"https://www.wired.com/feed/",
 				"https://factordaily.com/feed/",
@@ -158,7 +159,7 @@ print($html);
 </p>	
 </article>
 
-<article>
+<article id="coming-soon">
 <h2>Updates Coming Soon</h2>
 <p>
 	<ul>
