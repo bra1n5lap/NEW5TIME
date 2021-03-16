@@ -7,7 +7,7 @@
 	<title>One Line News</title>
 
 
-	<meta name="description" content="Get one line news from sources you love, all at one place using one line news.">
+	<meta name="description" content="Get news in one line from sources you love, all at one place.">
 
 	<!-- <link rel='stylesheet' href='https://classless.de/classless.css'> -->
 	<!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
@@ -126,6 +126,8 @@ foreach ($matches as $index => $val) {
 
 // $text .= "<hr>";
 
+print($text);
+
 return $text;
 
 }
@@ -137,7 +139,7 @@ foreach ($sites as $site) {
 	$html .= fetch_urls($site);
 }
 
-print($html);
+// print($html);
 
 
 ?>
