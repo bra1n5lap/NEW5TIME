@@ -151,7 +151,7 @@ function saveSources(elm){
 
 console.log("start is "+localStorage.getItem("srcs"));
 
-if(localStorage.getItem("srcs")===null | localStorage.getItem("srcs").trim()===""){
+if(localStorage.getItem("srcs")===null ){
 	localStorage.setItem("srcs", sites);
 	// console.log(localStorage.getItem("srcs"));
 
