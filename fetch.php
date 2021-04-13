@@ -77,7 +77,7 @@ foreach ($matches as $index => $val) {
 
 // $text .= "<hr>";
 
-print($text);
+// print($text);
 
 return $text;
 
