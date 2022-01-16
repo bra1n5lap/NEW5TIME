@@ -1,110 +1,166 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>One Line News by Brainslap</title>
+<link rel="stylesheet" href="https://unpkg.com/mvp.css">
+<style type="text/css">
+        a:visited {
+            color: #aaaaaa;
+        }
 
-	<title>One Line News</title>
+        a:hover {
+            color: #0000FF;
+        }
 
-
-	<meta name="description" content="Get news in one line from sources you love, all at one place.">
-
-	<!-- <link rel='stylesheet' href='https://classless.de/classless.css'> -->
-	<!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.5.min.css"/>
-
-
-
-	<style>
-		a:link {
-			color: #FF0000;
-		}
-
-		a:visited {
-			color: #aaaaaa;
-		}
-
-		a:hover {
-			color: #FF00FF;
-		}
-
-		a:active {
-			color: #0000FF;
-		}
-	</style>
-
-</head>
-<body>
+        a:active {
+            color: #0000FF;
+        }
 
 
-    <header>
-    	<nav>
-    		<ul>
-    			<li><h1>One Line News</h1><p>...from sources you love, at one place!!!</p></li>
-    		</ul>
-       	</nav>
+:root {
+    --active-brightness: 0.85;
+    --border-radius: 5px;
+    --box-shadow: 2px 2px 10px;
+    --color: #118bee15;
+    --color-accent: #118bee15;
+    --color-bg: #fff;
+    --color-bg-secondary: #e9e9e9;
+    --color-link: #ff0000;
+    --color-secondary: #920de9;
+    --color-secondary-accent: #920de90b;
+    --color-shadow: #f4f4f4;
+    --color-table: #118bee;
+    --color-text: #000;
+    --color-text-secondary: #999;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --hover-brightness: 1.2;
+    --justify-important: center;
+    --justify-normal: left;
+    --line-height: 1.5;
+    --width-card: 285px;
+    --width-card-medium: 460px;
+    --width-card-wide: 800px;
+    --width-content: 1080px;
+}
+
+
+
+
+
+
+    
+* {
+    /*border: 1px solid red;*/
+
+}    
+
+
+
+header, nav {
+    margin: 0;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 425px;
+    width: 100%;
+    /*padding-left: 100px;*/
+    margin: auto;
+    /*text-align: center;*/
+    /*margin: 0;*/
+    /*border: 1px solid red;*/
+    /*align-content: center;*/
+    /*background-color: red;*/
+}
+/*
+nav ul li {
+    /*margin: auto;*/
+    /*padding: 0;*/
+    max-width: 33%;
+    text-align: center;
+
+    /*align-content: center;*/
+}
+*/
+/*
+nav ul li a {
+    margin: auto;
+    /*padding: 0;*/
+    width: 30%;
+    text-align: center;
+    /*align-content: center;*/
+}
+*/
+
+
+</style>
+
+
+	</head>
+	<body>
+ <header>
+                <h1>1 Line News</h1>
+
         <nav>
-            <ul>
-            	<li><a href="#edit-srcs">Sources</a></li>
+             <!-- <a href="https://5hu3hendu.com/"><img alt="MVP.css" src="logo.png" height="70"></a>             -->
+                <ul>
+                <li><a href="">Home</a></li>
+                
+                <li><a href="#edit-srcs">Sources</a></li>
+            
                 <li><a href="#about">About</a></li>
-                <li><a href="#coming-soon">Coming Soon...</a></li>
-            </ul>
+                <!-- // <li><a href="#" onClick="toggleDarkMode();" id="colorToggle">Dark Mode</a></li> -->
+                <!-- <li><a href="https://www.github.com/andybrewer/mvp/" target="_blank">GitHub &nearr;</a></li> -->
+               </ul>
         </nav>
-        <br>
-<!--         <p><a href="#"><i>Italic Link Button</i></a><a href="#"><b>Bold Link Button &rarr;</b></a></p>
- -->    </header>
-
+        <p>Read latest 5 articls from your favourite sources.
+            <br>No log-in required at all!!!
+        </p>
+    </header>
+<main>
 <article id="news">
 
-
 </article>
-
+<br>
 <hr>
-
+<br>
 <h2 id="edit-srcs">Sources</h2>
-<p>Paste RSS link. Generally xyz.com/feed/ or xyz.com/rss/</p>
+
+<input class="source"  type="checkbox" onclick="update_ls()"  value="https://finshots.in/rss/"  />Finshots <br>
+<input class="source"  type="checkbox" onclick="update_ls()" value="https://cms.qz.com/feed/" />Quarts <br>
+<input class="source"  type="checkbox" onclick="update_ls()" value="https://www.kuwi.news/feed/" />Keeping Up With India <br>
+<p><sup>TIP</sup> Reload page after selecting sources!</p>
+
+
+<!-- <p>Paste RSS link. Generally xyz.com/feed/ or xyz.com/rss/</p>
 <textarea width="100%" height="100px" onclick="saveSources(this)" id="sources"></textarea>
+ -->
+ <br>
+ <hr>
+ <br>
 
 <article id="about">
 <h2 >About OneLineNews</h2>
 <p>
-	One line news is an attempt to simplify the way we consume news.<br>
-	We believe human knows what they want or at least with right tool/platform they can decide what they want.
-	<br>
-	So, instead of algorithms deciding "news for you",<br>
-	read news from sources/people you know/love.<br>
-	A weekend project by <a href="https://twitter.com/5HU3HENDU">Shubhendu Singh</a>.
+    One line news is an attempt to simplify the way we consume news & articles.<br>
+    <br>
+    read news from sources/people you know/love.<br>
 
-</p>	
+    A weekend project by <a href="https://twitter.com/5HU3HENDU">Shubhendu Singh</a>.
+
+</p>    
 </article>
+<br>
+<hr>
+<br>
 
-<article id="coming-soon">
-<h2>Updates Coming Soon</h2>
-<p>
-	<ul>
-		<del><li>customize sources (add/remove/sort)</li></del>
-		<li>An app for iOS & Android (before ClubHouse's)</li>
-		<li>Byju's acquisition offer or billion dollar IPO XD</li>
-	</ul>	
-</p>
-
-</article>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JY0Y8HJ43T">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JY0Y8HJ43T');
-</script>	
 
 <script type="text/javascript">
 
 var resp = "";
-	
+    
 function fetchUrls(site) {
   // var xhttp = new XMLHttpRequest();
   // xhttp.onreadystatechange = function() {
@@ -119,9 +175,9 @@ function fetchUrls(site) {
   // xhttp.send("site="+site);
   var resp = "";
 
-	let formData = new FormData();	
+    let formData = new FormData();  
 
-	formData.append("site",site);
+    formData.append("site",site);
 
 
 fetch('http://onelinenew5.com/fetch.php',{method:"post",body:formData})
@@ -134,61 +190,139 @@ fetch('http://onelinenew5.com/fetch.php',{method:"post",body:formData})
 
 }
 
-var sites = "https://www.kuwi.news/feed/  \n https://finshots.in/rss/ \n https://cms.qz.com/feed/ ";
 
 
 
-function saveSources(elm){
+// var default_sites = "https://www.kuwi.news/feed/ https://finshots.in/rss/ https://cms.qz.com/feed/ ";
 
-	var src = elm.value;
+function update_ls(){
 
-	console.log(src);
+    var cb = document.querySelectorAll('input[class=source]:checked');
+    if(cb.length>0){
+    var txt = '';
+    for (var i = 0;i<cb.length; i++) {
+        txt += cb[i].value + " ";
 
-	localStorage.setItem("srcs", src);
+    }
+    localStorage.setItem("sources",txt);    
+}
+else{
+    localStorage.setItem("sources",'');
+}
+}
+
+
+function cbvalue(){
+
+    if(localStorage.getItem("sources")===null | localStorage.getItem("sources").trim()===""){
+
+
+
+
+    var cb = document.querySelectorAll('input[class=source]:checked');
+    if(cb.length>0){
+    var txt = '';
+    for (var i = 0;i<cb.length; i++) {
+        txt += cb[i].value + " ";
+
+    }
+    localStorage.setItem("sources",txt);
+}
+else{
+    var default_sites = "https://www.kuwi.news/feed/ https://finshots.in/rss/ ";
+    localStorage.setItem("sources",default_sites);    
+}
+
+    }
+    else {
+        console.log("not nullllllllllllll");
+        var cb = document.querySelectorAll('input[class=source]');
+        src = localStorage.getItem("sources");
+    for (var i = 0;i<cb.length; i++) {
+        if(src.includes(cb[i].value)){
+            console.log("includes");
+            // console.log("yess",i.value);
+            cb[i].checked = true;
+
+        }
+
+    }        
+
+    }
+
+    // return txt;
+   
+
 
 
 }
 
-console.log("start is "+localStorage.getItem("srcs"));
+// cbvalue();
 
-if(localStorage.getItem("srcs")===null | localStorage.getItem("srcs").trim()===""){
-	localStorage.setItem("srcs", sites);
-	// console.log(localStorage.getItem("srcs"));
+// function saveSources(elm){
 
-}
+//     var src = elm.value;
+
+//     console.log(src);
+
+//     localStorage.setItem("srcs", src);
+
+
+// }
+
+// console.log("start is "+localStorage.getItem("srcs"));
+
+// if(localStorage.getItem("srcs")===null | localStorage.getItem("srcs").trim()===""){
+//     localStorage.setItem("srcs", sites);
+//     // console.log(localStorage.getItem("srcs"));
+
+// }
 
 
 
-sites = localStorage.getItem("srcs");
+sites = localStorage.getItem("sources");
 
-document.getElementById("sources").innerText = sites;
+// document.getElementById("sources").innerText = sites;
 
 
 sites_array = sites.split("http");
 
 
 for (var i = 0;i < sites_array.length; i++) {
-	if(sites_array[i].trim()===""){
-		continue;
-	}
-	console.log(sites_array[i]);
-	// resp +=	fetchUrls("http"+sites_array[i].trim());
+    if(sites_array[i].trim()===""){
+        continue;
+    }
+    // console.log(sites_array[i]);
+    // resp +=  fetchUrls("http"+sites_array[i].trim());
 
-	var tmp = "http"+sites_array[i].trim();
+    var tmp = "http"+sites_array[i].trim();
 
-	let formData = new FormData();	
+    let formData = new FormData();  
 
-	formData.append("site",tmp);
+    formData.append("site",tmp);
 
-	fetch('http://onelinenew5.com/fetch.php',{method:"post",body:formData})
-	.then(response => response.text())
-	.then(data => document.getElementById("news").innerHTML += data );
+    fetch('http://onelinenew5.com/fetch.php',{method:"post",body:formData})
+    .then(response => response.text())
+    .then(data => document.getElementById("news").innerHTML += data );
 
 }
 
+window.onload = function() {
+  cbvalue();
 
-
+};
 </script>
 
-</body>
-</html>
+
+
+</main>
+<footer>
+    
+</footer>
+
+
+
+	<!-- <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script> -->
+
+	</body>
+	</html>
