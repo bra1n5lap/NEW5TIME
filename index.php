@@ -233,7 +233,7 @@ else{
     localStorage.setItem("sources",default_sites);    
 }
 
-    // }
+    }
     else {
         console.log("not nullllllllllllll");
         var cb = document.querySelectorAll('input[class=source]');
