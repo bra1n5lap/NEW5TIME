@@ -301,7 +301,7 @@ for (var i = 0;i < sites_array.length; i++) {
 
     formData.append("site",tmp);
 
-    fetch('http://onelinenew5.com/fetch.php',{method:"post",body:formData})
+    fetch('https://onelinenews.bra1n5lap.com/fetch.php',{method:"post",body:formData})
     .then(response => response.text())
     .then(data => document.getElementById("news").innerHTML += data );
 
