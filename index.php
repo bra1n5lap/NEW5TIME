@@ -214,8 +214,8 @@ else{
 
 function cbvalue(){
 
-    if(localStorage.getItem("sources")===null | localStorage.getItem("sources").trim()===""){
-
+    if(localStorage.getItem("sources")===null ){
+// | localStorage.getItem("sources").trim()===""
 
 
 
