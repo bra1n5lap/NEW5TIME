@@ -279,7 +279,8 @@ else{
 // }
 
 
-
+function show_data(){
+	
 sites = localStorage.getItem("sources");
 
 // document.getElementById("sources").innerText = sites;
@@ -306,9 +307,11 @@ for (var i = 0;i < sites_array.length; i++) {
     .then(data => document.getElementById("news").innerHTML += data );
 
 }
+}
 
 window.onload = function() {
   cbvalue();
+  show_data();
 
 };
 </script>
