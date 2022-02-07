@@ -29,7 +29,7 @@ $sites = array( "https://the-ken.com/feed/",
 function fetch_urls($site){
 
 // $site = "https://the-ken.com/feed/";
-$max = 7;
+$max = 6;
 
 
 $text = "";
@@ -47,13 +47,13 @@ $title = "/(<title>)(.+?)(<\/title>)/im";
 preg_match_all($title, $rss, $titles);
 
 $matches = $matches[0];
+$matches = array_unique($matches);	
 $matches = array_slice($matches, 0, $max, true);
 
 $titles = $titles[0];
+$titles = array_unique($titles);	
 $titles = array_slice($titles, 0, $max, true);
 
-$titles = array_unique($titles);
-$matches = array_unique($matches);
 
 // print_r($titles);
 // print_r($matches);
