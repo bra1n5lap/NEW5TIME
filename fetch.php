@@ -52,6 +52,8 @@ $matches = array_slice($matches, 0, $max, true);
 $titles = $titles[0];
 $titles = array_slice($titles, 0, $max, true);
 
+$titles = array_unique($titles)
+$matches = array_unique($matches)
 
 // print_r($titles);
 // print_r($matches);
@@ -68,10 +70,10 @@ foreach ($matches as $index => $val) {
 	$name = str_replace("</title>","",$name);	
 
 	if ($index==0) {
-	 	$text = "<h2><a href=\"".$val."\">".$name."</a></h2><br>";
+	 	$text = "<h2><a class=\"normal\" target=\"_blank\" href=\"".$val."\">".$name."</a></h2><br>";
 	 }
 	 else {
-		$text .= "<a href=\"".$val."\">".$name."</a><br>";
+		$text .= "<a target=\"_blank\" href=\"".$val."\">".$name."</a><br>";
 	}
 }
 
