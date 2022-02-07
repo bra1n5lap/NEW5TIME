@@ -52,8 +52,8 @@ $matches = array_slice($matches, 0, $max, true);
 $titles = $titles[0];
 $titles = array_slice($titles, 0, $max, true);
 
-$titles = array_unique($titles)
-$matches = array_unique($matches)
+$titles = array_unique($titles);
+$matches = array_unique($matches);
 
 // print_r($titles);
 // print_r($matches);
